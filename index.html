@@ -592,7 +592,15 @@ function calculate() {
   // Обрезаем лишние нули для м², но сохраняем читаемость
   let areaMDisplay = areaMFixed.replace(/\.?0+$/, '');
   if (areaMDisplay === '') areaMDisplay = '0';
-  $('resultValueM').innerHTML = areaMDisplay;
+
+  // Дополнительно: × 10^N в скобках
+  let areaMSci = '';
+  if (areaMinM2 !== 0) {
+    const exp = Math.floor(Math.log10(Math.abs(areaMinM2)));
+    const coeff = (areaMinM2 / Math.pow(10, exp)).toFixed(4).replace(/\.?0+$/, '');
+    areaMSci = ` <span style="font-size:.75em;color:var(--muted);font-weight:400">(${coeff}×10<sup>${exp}</sup>)</span>`;
+  }
+  $('resultValueM').innerHTML = areaMDisplay + areaMSci;
   $('verdictLabel').textContent = t('verdict-ok');
 
   $('formulaBlock').innerHTML =
