@@ -1,73 +1,73 @@
-# КолумнКальк – Подбор сечения стержней
+# ColumnCalc – Cross-Section Selection for Compression Members
 
-Онлайн-калькулятор подбора требуемой площади сечения центрально-сжатых стальных стержней по **СП 16.13330.2017**.
+Online calculator for determining the required cross-sectional area of centrally compressed steel members per **SP 16.13330.2017**.
 
-🔗 **[Открыть калькулятор](https://sherhn.github.io/columncalc/)**
+🔗 **[Open Calculator](https://sherhn.github.io/columncalc/)**
 
 ---
 
-## О проекте
+## About
 
-Инструмент позволяет инженеру-конструктору быстро определить **минимально необходимую площадь сечения** сжатого стержня (колонны, стойки, раскоса):
+This tool helps structural engineers quickly determine the **minimum required cross-sectional area** of a compressed member (column, strut, diagonal):
 
 ```
 A ≥ N / (φ × Ry × γc)
 ```
 
-без необходимости вручную интерполировать таблицы и считать на листочке.
+without manually interpolating tables or doing hand calculations.
 
-### Что умеет калькулятор
+### Features
 
-- Определяет расчётное сопротивление **Ry** по марке стали и выбранному диапазону толщин (таблица В.5 СП 16)
-- Вычисляет условную гибкость **λ̄ = λ × √(Ry / E)**
-- Находит коэффициент продольного изгиба **φ** для кривых устойчивости **a / b / c**
-- Возвращает требуемую площадь **Aтр** в см² и м²
-- Отображает полную подстановку значений в формулу
-- Поддерживает единицы: Н / кН / МН / тс, мм² / см² / м²
-- Интерфейс на **5 языках**: RU, EN, DE, FR, 中文
+- Determines the design resistance **Ry** by steel grade and selected thickness range (Table B.5 of SP 16)
+- Calculates the reduced slenderness **λ̄ = λ × √(Ry / E)**
+- Finds the buckling reduction factor **φ** for stability curves **a / b / c**
+- Returns the required area **A_req** in cm² and m²
+- Displays the full formula substitution with all values
+- Supports units: N / kN / MN / tf, mm² / cm² / m²
+- Interface available in **5 languages**: RU, EN, DE, FR, 中文
 
 ---
 
-## Поддерживаемые стали
+## Supported Steel Grades
 
 C235 · C245 · C255 · C345 · C345K · C355 · C355-1/K · C390/C390-1 · C440 · C590 · C690
 
 ---
 
-## Стек
+## Tech Stack
 
-| Слой | Технология |
+| Layer | Technology |
 |---|---|
-| Разметка | HTML5 |
-| Стили | CSS (Custom Properties, Grid, Flexbox) |
-| Логика | Vanilla JS (ES Modules) |
-| Шрифты | IBM Plex Sans / IBM Plex Mono |
-| Хостинг | GitHub Pages |
+| Markup | HTML5 |
+| Styles | CSS (Custom Properties, Grid, Flexbox) |
+| Logic | Vanilla JS (ES Modules) |
+| Fonts | IBM Plex Sans / IBM Plex Mono |
+| Hosting | GitHub Pages |
 
-Никаких фреймворков, никаких зависимостей – один `index.html` и два вспомогательных модуля.
+No frameworks, no dependencies — a single `index.html` and two helper modules.
 
 ---
 
-## Структура репозитория
+## Repository Structure
 
 ```
-├── index.html          # Основная страница
+├── index.html          # Main page
 ├── scripts/
-│   ├── calculator.js   # Вычислительное ядро (Ry, λ̄, φ, подбор площади)
-│   └── i18n.js         # Строки локализации
+│   ├── calculator.js   # Computation core (Ry, λ̄, φ, area selection)
+│   └── i18n.js         # Localization strings
 ├── images/
-│   ├── a.png           # Иконка сечения – тип а
-│   ├── b.png           # Иконка сечения – тип b
-│   └── c.png           # Иконка сечения – тип с
+│   ├── a.png           # Section icon – type a
+│   ├── b.png           # Section icon – type b
+│   └── c.png           # Section icon – type c
 ├── README.md
 └── LICENSE
 ```
 
 ---
 
-## Локальный запуск
+## Running Locally
 
-Так как проект использует ES Modules, файлы нужно открывать через локальный сервер, а не напрямую из файловой системы.
+Since the project uses ES Modules, files must be served through a local server rather than opened directly from the filesystem.
 
 ```bash
 # Python 3
@@ -77,29 +77,29 @@ python -m http.server 8000
 npx serve .
 ```
 
-После этого откройте `http://localhost:8000` в браузере.
+Then open `http://localhost:8000` in your browser.
 
 ---
 
-## Деплой на GitHub Pages
+## Deploying to GitHub Pages
 
-1. Залейте репозиторий на GitHub
-2. Перейдите в **Settings → Pages**
-3. В разделе **Source** выберите ветку `main`, папку `/ (root)`
-4. Нажмите **Save** – сайт будет доступен по адресу `https://<username>.github.io/<repo>/`
-
----
-
-## Нормативная база
-
-- **СП 16.13330.2017** – Стальные конструкции (актуализированная редакция СНиП II-23-81*)
-- Таблица В.5 – Расчётные сопротивления проката
-- Приложение Д – Коэффициент φ для кривых устойчивости a, b, c
+1. Push the repository to GitHub
+2. Go to **Settings → Pages**
+3. Under **Source**, select branch `main`, folder `/ (root)`
+4. Click **Save** — the site will be available at `https://<username>.github.io/<repo>/`
 
 ---
 
-## Лицензия
+## Normative References
 
-© 2026 sherhn. Все права защищены.  
-Использование, распространение и коммерческое применение – только с письменного разрешения автора.  
-Подробнее см. файл [LICENSE](./LICENSE).
+- **SP 16.13330.2017** – Steel Structures (updated edition of SNiP II-23-81*)
+- Table B.5 – Design resistances of rolled steel
+- Annex D – Buckling reduction factor φ for stability curves a, b, c
+
+---
+
+## License
+
+© 2026 sherhn. All rights reserved.  
+Use, distribution, and commercial application are permitted only with the author's written consent.  
+See the [LICENSE](./LICENSE) file for details.
