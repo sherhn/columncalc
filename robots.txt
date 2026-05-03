@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sherhn.github.io/columncalc/sitemap.xml
