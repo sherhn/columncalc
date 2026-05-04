@@ -75,21 +75,6 @@
     .lang-btn.active { background: var(--white); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
     .lang-btn:hover:not(.active) { color: var(--text); }
 
-    /* ── Ad ── */
-    .ad-label { font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); flex-shrink: 0; }
-    .ad-zone {
-      background: var(--bg); border: 1px dashed var(--border2); border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 11px;
-    }
-    .ad-zone.sidebar-tall { width: 100%; height: 200px; }
-    .ad-zone.sidebar-rect { width: 100%; height: 600px; }
-    .footer-ad {
-      background: var(--white); border-top: 1px solid var(--border);
-      padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 6px;
-    }
-    .ad-zone.footer-zone { width: min(970px, 100%); height: 90px; }
-
     /* ── Page layout ── */
     .page {
       max-width: 1060px; margin: 0 auto;
@@ -197,8 +182,6 @@
 
     .sb { display: flex; flex-direction: column; gap: 14px; }
     .sb-sticky { position: sticky; top: 76px; display: flex; flex-direction: column; gap: 14px; }
-    .ad-block { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 12px; }
-    .ad-block .ad-label { display: block; margin-bottom: 7px; }
     .ref-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 16px; }
     .ref-title { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 500; color: var(--muted); margin-bottom: 10px; }
     .ref-row { display: flex; gap: 10px; font-size: .78rem; padding: 6px 0; border-bottom: 1px solid var(--border); line-height: 1.4; }
@@ -452,10 +435,6 @@
 
   <aside class="sb" aria-label="Sidebar">
     <div class="sb-sticky">
-      <div class="ad-block">
-        <span class="ad-label" data-i18n="ad-label">Реклама</span>
-        <div class="ad-zone sidebar-tall">300 × 200</div>
-      </div>
       <div class="ref-card">
         <div class="ref-title" data-i18n="ref-title">Типы сечений (φ)</div>
         <div class="ref-row">
@@ -471,20 +450,14 @@
           <span class="ref-desc" data-i18n="ref-c">Составные сечения, уголки, крестовые</span>
         </div>
       </div>
-      <div class="ad-block">
-        <span class="ad-label" data-i18n="ad-label">Реклама</span>
-        <div class="ad-zone sidebar-rect">300 × 600</div>
-      </div>
     </div>
   </aside>
 
 </div>
 </main>
 
-<footer class="footer-ad">
-  <span class="ad-label" data-i18n="ad-label">Реклама</span>
-  <div class="ad-zone footer-zone">970 × 90 – нижний баннер</div>
-  <a href="privacy.html" style="font-size:.7rem;color:var(--muted);margin-top:6px;text-decoration:none;border-bottom:1px solid var(--border);">Политика конфиденциальности</a>
+<footer style="padding: 16px; display: flex; justify-content: center; border-top: 1px solid var(--border); background: var(--white);">
+  <a href="privacy.html" style="font-size:.7rem;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--border);">Политика конфиденциальности</a>
 </footer>
 
 <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
@@ -672,18 +645,6 @@ $('calculateBtn').addEventListener('click', calculate);
 [forceInput, lambdaInput].forEach(el =>
   el.addEventListener('keydown', e => e.key === 'Enter' && calculate())
 );
-
-// ── Cookie consent & РСЯ ─────────────────────────────────────────────────────
-import { initConsent, onConsentGranted } from './scripts/cookie-consent.js';
-
-onConsentGranted(() => {
-  const script = document.createElement('script');
-  script.src = 'https://yandex.ru/ads/system/context.js';
-  script.async = true;
-  document.head.appendChild(script);
-});
-
-initConsent();
 
 applyLang('ru');
 updateThicknessOptions();
