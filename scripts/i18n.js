@@ -55,7 +55,7 @@ export const STRINGS = {
     'disclaimer':    'Результаты носят справочный характер. Калькулятор не заменяет проектную документацию, выполненную аттестованным специалистом. Автор не несёт ответственности за последствия применения результатов расчётов.',
     'partner-label': 'Смотрите также',
     'partner-name':  'МеталКальк',
-    'partner-desc':  'Проверка устойчивости центрально-сжатых стержней — N / (φ × A × Ry × γc) ≤ 1',
+    'partner-desc':  'Проверка устойчивости центрально-сжатых стержней – N / (φ × A × Ry × γc) ≤ 1',
   },
   en: {
     'logo-name':     'ColumnCalc',
@@ -109,7 +109,7 @@ export const STRINGS = {
     'disclaimer':    'Results are for reference only. This calculator does not replace design documentation prepared by a certified engineer. The author assumes no liability for any consequences arising from the use of these calculation results.',
     'partner-label': 'See also',
     'partner-name':  'MetalCalc',
-    'partner-desc':  'Buckling check for axially compressed members — N / (φ × A × Ry × γc) ≤ 1',
+    'partner-desc':  'Buckling check for axially compressed members – N / (φ × A × Ry × γc) ≤ 1',
   },
   de: {
     'logo-name':     'ColumnCalc',
@@ -163,7 +163,7 @@ export const STRINGS = {
     'disclaimer':    'Die Ergebnisse sind als Orientierungswerte zu verstehen. Der Rechner ersetzt keine Entwurfsdokumentation eines zertifizierten Fachplaners. Der Autor übernimmt keine Haftung für Folgen, die aus der Verwendung der Berechnungsergebnisse entstehen.',
     'partner-label': 'Siehe auch',
     'partner-name':  'MetalCalc',
-    'partner-desc':  'Stabilitätsnachweis für mittig gedrückte Stäbe — N / (φ × A × Ry × γc) ≤ 1',
+    'partner-desc':  'Stabilitätsnachweis für mittig gedrückte Stäbe – N / (φ × A × Ry × γc) ≤ 1',
   },
   fr: {
     'logo-name':     'ColumnCalc',
@@ -217,7 +217,7 @@ export const STRINGS = {
     'disclaimer':    'Les résultats sont fournis à titre indicatif uniquement. Ce calculateur ne remplace pas une documentation de projet établie par un ingénieur certifié. L\'auteur décline toute responsabilité quant aux conséquences de l\'utilisation des résultats de calcul.',
     'partner-label': 'Voir aussi',
     'partner-name':  'MetalCalc',
-    'partner-desc':  'Vérification au flambement des barres comprimées — N / (φ × A × Ry × γc) ≤ 1',
+    'partner-desc':  'Vérification au flambement des barres comprimées – N / (φ × A × Ry × γc) ≤ 1',
   },
   zh: {
     'logo-name':     'ColumnCalc',
@@ -271,7 +271,7 @@ export const STRINGS = {
     'disclaimer':    '计算结果仅供参考，不能替代由具备资质的工程师编制的设计文件。作者对使用本计算结果所产生的任何后果不承担责任。',
     'partner-label': '另请参阅',
     'partner-name':  'MetalCalc',
-    'partner-desc':  '轴心受压构件稳定性验算 — N / (φ × A × Ry × γc) ≤ 1',
+    'partner-desc':  '轴心受压构件稳定性验算 – N / (φ × A × Ry × γc) ≤ 1',
   },
 };
 

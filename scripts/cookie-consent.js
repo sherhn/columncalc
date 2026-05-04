@@ -27,16 +27,16 @@ export function initConsent() {
 
   if (stored === 'accepted') {
     if (elapsed < DAYS_ACCEPTED * 864e5) {
-      _fireCallbacks();   // срок не истёк — грузим РСЯ сразу
+      _fireCallbacks();   // срок не истёк – грузим РСЯ сразу
       return;
     }
-    // срок истёк — сбрасываем и показываем баннер заново
+    // срок истёк – сбрасываем и показываем баннер заново
     _clearStorage();
   }
 
   if (stored === 'declined') {
-    if (elapsed < DAYS_DECLINED * 864e5) return;  // срок не истёк — молчим
-    _clearStorage();                               // срок истёк — покажем снова
+    if (elapsed < DAYS_DECLINED * 864e5) return;  // срок не истёк – молчим
+    _clearStorage();                               // срок истёк – покажем снова
   }
 
   _injectStyles();
@@ -109,7 +109,7 @@ function _renderBanner() {
         <div class="mc-cb-text">
           Рекламная система Яндекс (РСЯ) использует куки-файлы для показа объявлений.
           Реклама позволяет поддерживать сайт бесплатным для всех пользователей.
-          Подробнее — в <a href="privacy.html" class="mc-cb-link">Политике конфиденциальности</a>.
+          Подробнее – в <a href="privacy.html" class="mc-cb-link">Политике конфиденциальности</a>.
         </div>
       </div>
       <div class="mc-cb-actions">

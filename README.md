@@ -2,7 +2,7 @@
 
 Online calculator for determining the required cross-sectional area of centrally compressed steel members per **SP 16.13330.2017**.
 
-🔗 **[Open Calculator](https://sherhn.github.io/columncalc/)**
+🔗 **[Open Calculator](https://columncalc.sherhn.space/)**
 
 ---
 
@@ -44,7 +44,7 @@ C235 · C245 · C255 · C345 · C345K · C355 · C355-1/K · C390/C390-1 · C440
 | Fonts | IBM Plex Sans / IBM Plex Mono |
 | Hosting | GitHub Pages |
 
-No frameworks, no dependencies — a single `index.html` and two helper modules.
+No frameworks, no dependencies – a single `index.html` and two helper modules.
 
 ---
 
@@ -86,7 +86,7 @@ Then open `http://localhost:8000` in your browser.
 1. Push the repository to GitHub
 2. Go to **Settings → Pages**
 3. Under **Source**, select branch `main`, folder `/ (root)`
-4. Click **Save** — the site will be available at `https://<username>.github.io/<repo>/`
+4. Click **Save** – the site will be available at `https://<username>.github.io/<repo>/`
 
 ---
 
