@@ -484,6 +484,7 @@
 <footer class="footer-ad">
   <span class="ad-label" data-i18n="ad-label">Реклама</span>
   <div class="ad-zone footer-zone">970 × 90 – нижний баннер</div>
+  <a href="privacy.html" style="font-size:.7rem;color:var(--muted);margin-top:6px;text-decoration:none;border-bottom:1px solid var(--border);">Политика конфиденциальности</a>
 </footer>
 
 <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
@@ -671,6 +672,18 @@ $('calculateBtn').addEventListener('click', calculate);
 [forceInput, lambdaInput].forEach(el =>
   el.addEventListener('keydown', e => e.key === 'Enter' && calculate())
 );
+
+// ── Cookie consent & РСЯ ─────────────────────────────────────────────────────
+import { initConsent, onConsentGranted } from './scripts/cookie-consent.js';
+
+onConsentGranted(() => {
+  const script = document.createElement('script');
+  script.src = 'https://yandex.ru/ads/system/context.js';
+  script.async = true;
+  document.head.appendChild(script);
+});
+
+initConsent();
 
 applyLang('ru');
 updateThicknessOptions();

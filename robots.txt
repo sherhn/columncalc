@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /privacy.html
 
 Sitemap: https://sherhn.github.io/columncalc/sitemap.xml
