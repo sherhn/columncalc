@@ -56,6 +56,8 @@ export const STRINGS = {
     'partner-label': 'Смотрите также',
     'partner-name':  'МеталКальк',
     'partner-desc':  'Проверка устойчивости центрально-сжатых стержней – N / (φ × A × Ry × γc) ≤ 1',
+    'footer-privacy': 'Политика конфиденциальности',
+    'footer-license': 'Лицензия',
   },
   en: {
     'logo-name':     'ColumnCalc',
@@ -110,6 +112,8 @@ export const STRINGS = {
     'partner-label': 'See also',
     'partner-name':  'MetalCalc',
     'partner-desc':  'Buckling check for axially compressed members – N / (φ × A × Ry × γc) ≤ 1',
+    'footer-privacy': 'Privacy Policy',
+    'footer-license': 'License',
   },
   de: {
     'logo-name':     'ColumnCalc',
@@ -164,6 +168,8 @@ export const STRINGS = {
     'partner-label': 'Siehe auch',
     'partner-name':  'MetalCalc',
     'partner-desc':  'Stabilitätsnachweis für mittig gedrückte Stäbe – N / (φ × A × Ry × γc) ≤ 1',
+    'footer-privacy': 'Datenschutzerklärung',
+    'footer-license': 'Lizenz',
   },
   fr: {
     'logo-name':     'ColumnCalc',
@@ -218,6 +224,8 @@ export const STRINGS = {
     'partner-label': 'Voir aussi',
     'partner-name':  'MetalCalc',
     'partner-desc':  'Vérification au flambement des barres comprimées – N / (φ × A × Ry × γc) ≤ 1',
+    'footer-privacy': 'Politique de confidentialité',
+    'footer-license': 'Licence',
   },
   zh: {
     'logo-name':     'ColumnCalc',
@@ -272,6 +280,8 @@ export const STRINGS = {
     'partner-label': '另请参阅',
     'partner-name':  'MetalCalc',
     'partner-desc':  '轴心受压构件稳定性验算 – N / (φ × A × Ry × γc) ≤ 1',
+    'footer-privacy': '隐私政策',
+    'footer-license': '许可协议',
   },
 };
 
