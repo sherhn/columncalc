@@ -58,6 +58,7 @@ export const STRINGS = {
     'partner-desc':  'Проверка устойчивости центрально-сжатых стержней – N / (φ × A × Ry × γc) ≤ 1',
     'footer-privacy': 'Политика конфиденциальности',
     'footer-license': 'Лицензия',
+    'gh-star':        'Звезда',
   },
   en: {
     'logo-name':     'ColumnCalc',
@@ -114,6 +115,7 @@ export const STRINGS = {
     'partner-desc':  'Buckling check for axially compressed members – N / (φ × A × Ry × γc) ≤ 1',
     'footer-privacy': 'Privacy Policy',
     'footer-license': 'License',
+    'gh-star':        'Star',
   },
   de: {
     'logo-name':     'ColumnCalc',
@@ -170,6 +172,7 @@ export const STRINGS = {
     'partner-desc':  'Stabilitätsnachweis für mittig gedrückte Stäbe – N / (φ × A × Ry × γc) ≤ 1',
     'footer-privacy': 'Datenschutzerklärung',
     'footer-license': 'Lizenz',
+    'gh-star':        'Stern',
   },
   fr: {
     'logo-name':     'ColumnCalc',
@@ -226,6 +229,7 @@ export const STRINGS = {
     'partner-desc':  'Vérification au flambement des barres comprimées – N / (φ × A × Ry × γc) ≤ 1',
     'footer-privacy': 'Politique de confidentialité',
     'footer-license': 'Licence',
+    'gh-star':        'Étoile',
   },
   zh: {
     'logo-name':     'ColumnCalc',
@@ -282,6 +286,7 @@ export const STRINGS = {
     'partner-desc':  '轴心受压构件稳定性验算 – N / (φ × A × Ry × γc) ≤ 1',
     'footer-privacy': '隐私政策',
     'footer-license': '许可协议',
+    'gh-star':        '收藏',
   },
 };
 
